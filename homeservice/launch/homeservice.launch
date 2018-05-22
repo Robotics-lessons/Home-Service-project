@@ -33,6 +33,6 @@
 
   <!--launch rviz-->
   <!--node name="rviz" pkg="rviz" type="rviz" respawn="false"/-->
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find homeservice)/rvizconfig/homeservice.rviz"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find homeservice)/rvizconfig/navigation.rviz"/>
   
 </launch>
