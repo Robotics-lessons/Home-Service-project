@@ -5,5 +5,6 @@ xterm -e " roslaunch homeservice homeservice.launch world_file:=$HOME/catkin_ws/
 sleep 5
 xterm -e " roslaunch homeservice gmapping.launch " &
 #sleep 5
-xterm -e " roslaunch turtlebot_teleop keyboard_teleop.launch " 
+xterm -e " roslaunch turtlebot_teleop keyboard_teleop.launch " &
+
 
