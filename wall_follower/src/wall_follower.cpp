@@ -10,7 +10,7 @@
 #include <algorithm>
 #include <stack>
 
-#define MOVE_PERCENT 0.1
+#define MOVE_PERCENT 0.06
 
 // ROS Publisher:Motor Commands, Subscriber:Laser Data, and Messages:Laser Messages & Motor Messages
 ros::Publisher motor_command_publisher;
@@ -57,23 +57,23 @@ bool robot_move(const ROBOT_MOVEMENT move_type)
     else if (move_type == TURN_LEFT) {
         ROS_INFO("[ROBOT] I'm turning left! \n");
         motor_command.linear.x = 0.0;
-        motor_command.angular.z = 1.0 * MOVE_PERCENT;
+        motor_command.angular.z = 1.0; //* MOVE_PERCENT;
     }
 
     else if (move_type == TURN_RIGHT) {
         ROS_INFO("[ROBOT] I'm turning right! \n");
         motor_command.linear.x = 0.0;
-        motor_command.angular.z = -1.0 * MOVE_PERCENT;
+        motor_command.angular.z = -1.0; //* MOVE_PERCENT;
     }
     else if (move_type == GO_RIGHT) {
         ROS_INFO("[ROBOT] I'm goin right! \n");
         motor_command.linear.x = 0.25 * MOVE_PERCENT;
-        motor_command.angular.z = -0.25 * MOVE_PERCENT;
+        motor_command.angular.z = -0.25; //* MOVE_PERCENT;
     }
     else if (move_type == GO_LEFT) {
         ROS_INFO("[ROBOT] I'm goin left! \n");
         motor_command.linear.x = 0.25 * MOVE_PERCENT;
-        motor_command.angular.z = 0.25 * MOVE_PERCENT;
+        motor_command.angular.z = 0.25; //* MOVE_PERCENT;
     }
     else {
         ROS_INFO("[ROBOT_MOVE] Move type wrong! \n");
