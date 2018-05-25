@@ -24,8 +24,8 @@ int main(int argc, char** argv){
   goal.target_pose.header.stamp = ros::Time::now();
 
   // Define a position and orientation for the robot to reach
-  goal.target_pose.pose.position.x = 9.0;
-  goal.target_pose.pose.position.y = -1.0;
+  goal.target_pose.pose.position.x = 3.5;
+  goal.target_pose.pose.position.y = 5.0;
   goal.target_pose.pose.orientation.w = 1.0;
 
    // Send the goal position and orientation for the robot to reach
@@ -41,8 +41,8 @@ int main(int argc, char** argv){
     ROS_INFO("Great, the robot moved the first goal successfully!");
     ROS_INFO("Waiting for 5 sec");
     ros::Duration(5.0).sleep();
-    goal.target_pose.pose.position.x = -1.0;
-    goal.target_pose.pose.position.y = -1.0;
+    goal.target_pose.pose.position.x = -3.6;
+    goal.target_pose.pose.position.y = 6.0;
     goal.target_pose.pose.orientation.w = 1.0;
     goal.target_pose.header.stamp = ros::Time::now();
     ROS_INFO("Sending the 2nd goal; x=%g, y=%g, w=%g", goal.target_pose.pose.position.x, goal.target_pose.pose.position.y, goal.target_pose.pose.orientation.w);
@@ -57,6 +57,6 @@ int main(int argc, char** argv){
   else {
     ROS_INFO("The base failed to move forward 1 meter for some reason");
   }
-  // ros::spin();
+ 
   return 0;
 }
