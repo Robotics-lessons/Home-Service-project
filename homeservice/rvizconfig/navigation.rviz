@@ -9,8 +9,6 @@ Panels:
         - /Global Map1/Planner1
         - /Local Map1/Planner1
         - /Local Map1/Trajectory Cloud1
-        - /Full Plan1
-        - /Camera1
       Splitter Ratio: 0.5
     Tree Height: 564
   - Class: rviz/Selection
@@ -514,10 +512,19 @@ Visualization Manager:
           Trajectory Cloud: true
           Value: true
         Map: true
+        Marker: true
         RobotModel: true
         TF: true
         Value: true
       Zoom Factor: 1
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: visualization_marker
+      Name: Marker
+      Namespaces:
+        my_marker: true
+      Queue Size: 100
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
