@@ -10,7 +10,7 @@
 #include <algorithm>
 #include <stack>
 
-#define MOVE_PERCENT 0.07
+#define MOVE_PERCENT 0.1
 
 // ROS Publisher:Motor Commands, Subscriber:Laser Data, and Messages:Laser Messages & Motor Messages
 ros::Publisher motor_command_publisher;
