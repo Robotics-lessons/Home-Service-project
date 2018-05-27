@@ -56,6 +56,9 @@
   <exec_depend>roscpp</exec_depend>
   <exec_depend>visualization_msgs</exec_depend>
 
+  <build_depend>pick_objects</build_depend>
+  <exec_depend>pick_objects</exec_depend>
+
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>

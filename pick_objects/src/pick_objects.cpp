@@ -9,7 +9,7 @@ typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseCl
 int main(int argc, char** argv){
   int start_goal_x = 4.0;
   int start_goal_y = 5.0;
-  int end_goal_x = -3.6;
+  int end_goal_x = -4.2;
   int end_goal_y = 6.0;
 
   // Initialize the simple_navigation_goals node

@@ -10,6 +10,7 @@ project(add_markers)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   visualization_msgs
+  pick_objects
 )
 
 ## System dependencies are found with CMake's conventions
@@ -102,10 +103,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
+  INCLUDE_DIRS include
 #  LIBRARIES add_markers
-#  CATKIN_DEPENDS roscpp visualization_msgs
-#  DEPENDS system_lib
+  CATKIN_DEPENDS roscpp visualization_msgs pick_objects
+#  DEPENDS pick_objects
 )
 
 ###########
@@ -115,7 +116,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
- include
+  include
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -127,12 +128,13 @@ include_directories(
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
-# add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+#add_dependencies(show_markers  ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(${PROJECT_NAME} src/add_markers.cpp  src/marker.cpp)
+add_executable(${PROJECT_NAME} src/add_markers.cpp  src/marker.cpp src/marker_msg.cpp)
+#add_executable(show_markers src/show_markers.cpp  src/marker.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -142,7 +144,7 @@ add_executable(${PROJECT_NAME} src/add_markers.cpp  src/marker.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+#add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
  target_link_libraries(${PROJECT_NAME}
