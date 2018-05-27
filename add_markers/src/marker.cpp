@@ -5,7 +5,7 @@
 #include "marker.h"
 
 // constructor
-marker::marker(const char* name, int id, uint32_t type , const char* frame_id)
+marker::marker(const char* name, int id, uint32_t type, int duration, const char* frame_id)
 {	
     a_marker = visualization_msgs::Marker();
     a_marker.ns = name;
@@ -13,7 +13,7 @@ marker::marker(const char* name, int id, uint32_t type , const char* frame_id)
     a_marker.type = type;
     a_marker.header.frame_id = frame_id;
     a_marker.header.stamp = ros::Time::now();
-    a_marker.lifetime = ros::Duration();
+    a_marker.lifetime = duration == 0 ? ros::Duration() : ros::Duration(duration);
  
     SetPosition();
     SetOrientation();
@@ -55,4 +55,23 @@ void marker::SetScale(float x, float y, float z)
 	a_marker.scale.x = x;
 	a_marker.scale.y = y;
 	a_marker.scale.z = z;
+}
+
+void marker::SetScalePercent(float percent)
+{
+	a_marker.scale.x = a_marker.scale.x * percent;
+	a_marker.scale.y = a_marker.scale.y * percent;
+	a_marker.scale.z = a_marker.scale.z * percent;
+}
+
+void marker::SetMeshResource(std::string resource)
+{ 
+	a_marker.type = visualization_msgs::Marker::MESH_RESOURCE;
+	a_marker.mesh_resource = "package://" + resource; 
+}
+
+void marker::SetText(std::string text)
+{ 
+	a_marker.type = visualization_msgs::Marker::TEXT_VIEW_FACING;
+	a_marker.text = text; 
 }

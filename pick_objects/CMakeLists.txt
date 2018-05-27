@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   move_base_msgs
   roscpp
   std_msgs
+  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -48,11 +49,11 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
+add_message_files(
+   FILES
+   Notify.msg
 #   Message2.msg
-# )
+ )
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -69,10 +70,11 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   move_base_msgs#   std_msgs
-# )
+generate_messages(
+   DEPENDENCIES
+#   move_base_msgs
+   std_msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -108,6 +110,7 @@ catkin_package(
 #  LIBRARIES pick_objects
 #  CATKIN_DEPENDS actionlib move_base_msgs roscpp std_msgs
 #  DEPENDS system_lib
+ CATKIN_DEPENDS message_runtime
 )
 
 ###########
@@ -117,7 +120,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+ include
   ${catkin_INCLUDE_DIRS}
 )
 

@@ -7,7 +7,7 @@
 
 
 #include <visualization_msgs/Marker.h>
-
+#include <string>
 
 /**
  * A marker wrap class.
@@ -18,7 +18,7 @@ public:
 	/**
 	 * Constructor
 	 */
-    marker(const char* name, int id, uint32_t type, const char* frame_id = "map");
+    marker(const char* name, int id, uint32_t type, int duration = 0, const char* frame_id = "map");
 	/**
 	 * Destructor
 	 */
@@ -49,19 +49,36 @@ public:
 	virtual void SetScale(float x = 1.0, float y = 1.0, float z = 1.0);
 
 	/**
-	 * SetAction
+	 * Set marker scale percentage
+	 * Default values are one
+	 */
+	virtual void SetScalePercent(float percent = 1.0);
+
+	/**
+	 * SetAction: actions are ADD, DELETE, DELETEALL
 	 */
 	virtual void SetAction(int action = visualization_msgs::Marker::ADD) 
           { a_marker.action = action; }
 
+    /**
+	 * SetMeshResource: pass mesh resource path and file name
+	 */
+	virtual void SetMeshResource(std::string resource); 
+
+    /**
+	 * SetText: pass test string
+	 */
+	virtual void SetText(std::string text); 
+
+
 	/**
-	 * GetMarker
+	 * GetMarker: Return a marker object
 	 */
 	virtual visualization_msgs::Marker GetMarker() 
           { return a_marker; }
 
 	/**
- 	 * IsType
+ 	 * IsType: Check marker type
 	 */
 	bool IsType(uint32_t type ) const 
           { return (a_marker.type == type); }
