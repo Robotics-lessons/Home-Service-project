@@ -2,6 +2,7 @@
 #include <move_base_msgs/MoveBaseAction.h>
 #include <actionlib/client/simple_action_client.h>
 #include <pick_objects/Notify.h>
+#include <visualization_msgs/Marker.h>
 
 // Define a client for to send goal requests to the move_base server through a SimpleActionClient
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
@@ -32,8 +33,8 @@ int main(int argc, char** argv){
   notify.header.stamp = ros::Time::now();
   notify.x = start_goal_x;
   notify.y = start_goal_y;
-  notify.action = 0;
-  notify.action_name = "show";
+  notify.action = visualization_msgs::Marker::ADD;
+  notify.message = "Show a red square object on the map";
   notifying_pub.publish(notify);
 
   move_base_msgs::MoveBaseGoal goal;
@@ -58,8 +59,8 @@ int main(int argc, char** argv){
   if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
   {
     ROS_INFO("Great, the robot moved the first goal successfully!");
-    notify.action = 1;
-    notify.action_name = "hide";
+    notify.action = visualization_msgs::Marker::DELETE;
+    notify.message = "The robot moved the pick up position successfully!";
     notify.header.stamp = ros::Time::now();
     notifying_pub.publish(notify);
     ROS_INFO("Waiting for 5 sec");
@@ -76,8 +77,8 @@ int main(int argc, char** argv){
       notify.header.stamp = ros::Time::now();
       notify.x = end_goal_x;
       notify.y = end_goal_y;
-      notify.action = 0;
-      notify.action_name = "show";
+      notify.action = visualization_msgs::Marker::ADD;
+      notify.message = "The robot moved to the drop off position successfully!";
       notifying_pub.publish(notify);
     } else {
       ROS_INFO("The base failed to move forward 1 meter for some reason");

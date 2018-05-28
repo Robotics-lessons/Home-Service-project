@@ -75,3 +75,4 @@ void marker::SetText(std::string text)
 	a_marker.type = visualization_msgs::Marker::TEXT_VIEW_FACING;
 	a_marker.text = text; 
 }
+

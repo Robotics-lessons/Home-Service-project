@@ -40,7 +40,7 @@ public:
 	 * Set marker color r, g, b, a
 	 * Default color value is glod
 	 */
-	virtual void SetColor(float r = 1.0, float g = 0.843, float b = 0.0, float a = 1.0);
+	virtual void SetColor(float r = 1.0, float g = 0.0, float b = 0.0, float a = 1.0);
 
 	/**
 	 * Set marker scale x, y, z
@@ -63,12 +63,12 @@ public:
     /**
 	 * SetMeshResource: pass mesh resource path and file name
 	 */
-	virtual void SetMeshResource(std::string resource); 
+	virtual void SetMeshResource(std::string resource = ""); 
 
     /**
 	 * SetText: pass test string
 	 */
-	virtual void SetText(std::string text); 
+	virtual void SetText(std::string text = ""); 
 
 
 	/**
@@ -82,6 +82,8 @@ public:
 	 */
 	bool IsType(uint32_t type ) const 
           { return (a_marker.type == type); }
+
+
 
 private:
         visualization_msgs::Marker a_marker;

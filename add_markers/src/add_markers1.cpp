@@ -30,7 +30,8 @@
      }
      marker_pub.publish(my_marker.GetMarker());
      ROS_INFO("Great, the marker add at the first position successfully!");
-     ros::Duration(4.0).sleep();
+     ros::Duration(5.0).sleep();
+
      // my_marker.SetAction(visualization_msgs::Marker::DELETE);
      // marker_pub.publish(my_marker.GetMarker());
      ROS_INFO("Great, the marker hind successfully!");

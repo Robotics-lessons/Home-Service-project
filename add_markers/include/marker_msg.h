@@ -20,7 +20,7 @@ public:
 	/**
 	 * Constructor
 	 */
-    marker_msg(const char* name);
+    marker_msg();
 	/**
 	 * Destructor
 	 */
@@ -42,9 +42,9 @@ public:
 	virtual void publish_marker(marker a_marker);
 
 private:
-        visualization_msgs::Marker a_marker;
-        ros::NodeHandle n;
+//        visualization_msgs::Marker a_marker;
         ros::Publisher marker_pub;
+        ros::Subscriber notify_sub;
    
 };
 
