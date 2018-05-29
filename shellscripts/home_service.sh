@@ -4,6 +4,8 @@ xterm -e " roslaunch homeservice homeservice.launch world_file:=$HOME/catkin_ws/
 sleep 5
 xterm -e " roslaunch turtlebot_gazebo amcl_demo.launch map_file:=$HOME/catkin_ws/src/homeservice/maps/homeservice.yaml  3d_sensor:=kinect " &
 sleep 5
+xterm -e " rosrun add_markers add_markers " &
+sleep 5
 xterm -e " roslaunch homeservice pick_objects.launch "
 
 
