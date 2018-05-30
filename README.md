@@ -229,11 +229,13 @@ Video link for Home Service project demo (https://youtu.be/wN6wdWHsIs8)
 [![Watch the video](images/home_service.png)](https://youtu.be/wN6wdWHsIs8)
 
 ## Discussion
-An another custom map was built to test wall follower alorithm and code. It icluded five rooms with 5 doors. The wall follower code was failed to scan these room structure. There was no digital map generated from this wall follower code.
+An another custom map was built to test wall follower alorithm and code. It icluded five rooms with 5 doors. The wall follower code was failed to scan these room structure. No digital map was generated from the current wall follower code.
 
 <img src="images/house.png" width="60%" height="60%" title="rosgraph">
 
 
+
+<img src="images/house-wall-follower.png" width="60%" height="60%" title="rosgraph">
 
 
 
