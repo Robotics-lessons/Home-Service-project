@@ -1,0 +1,1202 @@
+rostopic list -p
+==========================================================
+/amcl/parameter_descriptions
+/amcl/parameter_updates
+/amcl_pose
+/camera/depth/camera_info
+/camera/depth/image_raw
+/camera/depth/points
+/camera/parameter_descriptions
+/camera/parameter_updates
+/camera/rgb/camera_info
+/camera/rgb/image_raw
+/camera/rgb/image_raw/compressed
+/camera/rgb/image_raw/compressed/parameter_descriptions
+/camera/rgb/image_raw/compressed/parameter_updates
+/camera/rgb/image_raw/compressedDepth
+/camera/rgb/image_raw/compressedDepth/parameter_descriptions
+/camera/rgb/image_raw/compressedDepth/parameter_updates
+/camera/rgb/image_raw/theora
+/camera/rgb/image_raw/theora/parameter_descriptions
+/camera/rgb/image_raw/theora/parameter_updates
+/clicked_point
+/clock
+/cmd_vel_mux/active
+/cmd_vel_mux/input/navi
+/cmd_vel_mux/input/safety_controller
+/cmd_vel_mux/parameter_descriptions
+/cmd_vel_mux/parameter_updates
+/depthimage_to_laserscan/parameter_descriptions
+/depthimage_to_laserscan/parameter_updates
+/gazebo/link_states
+/gazebo/model_states
+/gazebo/parameter_descriptions
+/gazebo/parameter_updates
+/initialpose
+/joint_states
+/laserscan_nodelet_manager/bond
+/map
+/map_metadata
+/mobile_base/commands/velocity
+/mobile_base/events/bumper
+/mobile_base/events/cliff
+/mobile_base/sensors/bumper_pointcloud
+/mobile_base/sensors/imu_data
+/mobile_base_nodelet_manager/bond
+/move_base/DWAPlannerROS/cost_cloud
+/move_base/DWAPlannerROS/global_plan
+/move_base/DWAPlannerROS/local_plan
+/move_base/DWAPlannerROS/parameter_descriptions
+/move_base/DWAPlannerROS/parameter_updates
+/move_base/DWAPlannerROS/trajectory_cloud
+/move_base/NavfnROS/plan
+/move_base/cancel
+/move_base/current_goal
+/move_base/feedback
+/move_base/global_costmap/costmap
+/move_base/global_costmap/costmap_updates
+/move_base/global_costmap/footprint
+/move_base/global_costmap/inflation_layer/parameter_descriptions
+/move_base/global_costmap/inflation_layer/parameter_updates
+/move_base/global_costmap/obstacle_layer/clearing_endpoints
+/move_base/global_costmap/obstacle_layer/parameter_descriptions
+/move_base/global_costmap/obstacle_layer/parameter_updates
+/move_base/global_costmap/parameter_descriptions
+/move_base/global_costmap/parameter_updates
+/move_base/global_costmap/static_layer/parameter_descriptions
+/move_base/global_costmap/static_layer/parameter_updates
+/move_base/goal
+/move_base/local_costmap/costmap
+/move_base/local_costmap/costmap_updates
+/move_base/local_costmap/footprint
+/move_base/local_costmap/inflation_layer/parameter_descriptions
+/move_base/local_costmap/inflation_layer/parameter_updates
+/move_base/local_costmap/obstacle_layer/clearing_endpoints
+/move_base/local_costmap/obstacle_layer/parameter_descriptions
+/move_base/local_costmap/obstacle_layer/parameter_updates
+/move_base/local_costmap/parameter_descriptions
+/move_base/local_costmap/parameter_updates
+/move_base/parameter_descriptions
+/move_base/parameter_updates
+/move_base/result
+/move_base/status
+/move_base_simple/goal
+/navigation_velocity_smoother/parameter_descriptions
+/navigation_velocity_smoother/parameter_updates
+/navigation_velocity_smoother/raw_cmd_vel
+/notifying
+/odom
+/particlecloud
+/rosout
+/rosout_agg
+/scan
+/tf
+/tf_static
+/visualization_marker
+
+rostopic list -s
+==========================================================
+/camera/depth/camera_info
+/camera/depth/image_raw
+/camera/rgb/camera_info
+/camera/rgb/image_raw
+/clock
+/cmd_vel_mux/input/navi
+/cmd_vel_mux/input/safety_controller
+/cmd_vel_mux/input/switch
+/cmd_vel_mux/input/teleop
+/gazebo/set_link_state
+/gazebo/set_model_state
+/initialpose
+/joint_states
+/kobuki_safety_controller/disable
+/kobuki_safety_controller/enable
+/kobuki_safety_controller/reset
+/laserscan_nodelet_manager/bond
+/map
+/map_updates
+/mobile_base/commands/motor_power
+/mobile_base/commands/reset_odometry
+/mobile_base/commands/velocity
+/mobile_base/events/bumper
+/mobile_base/events/cliff
+/mobile_base/events/wheel_drop
+/mobile_base/sensors/bumper_pointcloud
+/mobile_base/sensors/core
+/mobile_base_nodelet_manager/bond
+/move_base/DWAPlannerROS/cost_cloud
+/move_base/DWAPlannerROS/global_plan
+/move_base/DWAPlannerROS/local_plan
+/move_base/DWAPlannerROS/trajectory_cloud
+/move_base/cancel
+/move_base/feedback
+/move_base/global_costmap/costmap
+/move_base/global_costmap/costmap_updates
+/move_base/global_costmap/footprint
+/move_base/goal
+/move_base/local_costmap/costmap
+/move_base/local_costmap/costmap_updates
+/move_base/local_costmap/footprint
+/move_base/result
+/move_base/status
+/move_base_simple/goal
+/navigation_velocity_smoother/raw_cmd_vel
+/notifying
+/odom
+/particlecloud
+/rosout
+/scan
+/tf
+/tf_static
+/visualization_marker
+/visualization_marker_array
+rostopic info /amcl/parameter_descriptions
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /amcl (http://yangnie-HP:37329/)
+
+Subscribers: None
+
+
+rostopic info /amcl/parameter_updates
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /amcl (http://yangnie-HP:37329/)
+
+Subscribers: None
+
+
+rostopic info /amcl_pose
+Type: geometry_msgs/PoseWithCovarianceStamped
+
+Publishers: 
+ * /amcl (http://yangnie-HP:37329/)
+
+Subscribers: None
+
+
+rostopic info /camera/depth/camera_info
+Type: sensor_msgs/CameraInfo
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: 
+ * /laserscan_nodelet_manager (http://yangnie-HP:32849/)
+
+
+rostopic info /camera/depth/image_raw
+Type: sensor_msgs/Image
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: 
+ * /laserscan_nodelet_manager (http://yangnie-HP:32849/)
+
+
+rostopic info /camera/depth/points
+Type: sensor_msgs/PointCloud2
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: None
+
+
+rostopic info /camera/parameter_descriptions
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: None
+
+
+rostopic info /camera/parameter_updates
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: None
+
+
+rostopic info /camera/rgb/camera_info
+Type: sensor_msgs/CameraInfo
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: 
+ * /rviz (http://yangnie-HP:39443/)
+
+
+rostopic info /camera/rgb/image_raw
+Type: sensor_msgs/Image
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: 
+ * /rviz (http://yangnie-HP:39443/)
+
+
+rostopic info /camera/rgb/image_raw/compressed
+Type: sensor_msgs/CompressedImage
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: None
+
+
+rostopic info /camera/rgb/image_raw/compressed/parameter_descriptions
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: None
+
+
+rostopic info /camera/rgb/image_raw/compressed/parameter_updates
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: None
+
+
+rostopic info /camera/rgb/image_raw/compressedDepth
+Type: sensor_msgs/CompressedImage
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: None
+
+
+rostopic info /camera/rgb/image_raw/compressedDepth/parameter_descriptions
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: None
+
+
+rostopic info /camera/rgb/image_raw/compressedDepth/parameter_updates
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: None
+
+
+rostopic info /camera/rgb/image_raw/theora
+Type: theora_image_transport/Packet
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: None
+
+
+rostopic info /camera/rgb/image_raw/theora/parameter_descriptions
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: None
+
+
+rostopic info /camera/rgb/image_raw/theora/parameter_updates
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: None
+
+
+rostopic info /clicked_point
+Type: geometry_msgs/PointStamped
+
+Publishers: 
+ * /rviz (http://yangnie-HP:39443/)
+
+Subscribers: None
+
+
+rostopic info /clock
+Type: rosgraph_msgs/Clock
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: 
+ * /rosout (http://yangnie-HP:38099/)
+ * /robot_state_publisher (http://yangnie-HP:40637/)
+ * /cmd_vel_mux (http://yangnie-HP:45365/)
+ * /bumper2pointcloud (http://yangnie-HP:35163/)
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+ * /depthimage_to_laserscan (http://yangnie-HP:35601/)
+ * /laserscan_nodelet_manager (http://yangnie-HP:32849/)
+ * /rviz (http://yangnie-HP:39443/)
+ * /joint_state_publisher (http://yangnie-HP:44507/)
+ * /gazebo (http://yangnie-HP:44683/)
+ * /map_server (http://yangnie-HP:42253/)
+ * /amcl (http://yangnie-HP:37329/)
+ * /navigation_velocity_smoother (http://yangnie-HP:33191/)
+ * /kobuki_safety_controller (http://yangnie-HP:36537/)
+ * /move_base (http://yangnie-HP:44163/)
+ * /add_marker (http://yangnie-HP:42829/)
+ * /pick_objects (http://yangnie-HP:43117/)
+
+
+rostopic info /cmd_vel_mux/active
+Type: std_msgs/String
+
+Publishers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+Subscribers: None
+
+
+rostopic info /cmd_vel_mux/input/navi
+Type: geometry_msgs/Twist
+
+Publishers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+Subscribers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+
+rostopic info /cmd_vel_mux/input/safety_controller
+Type: geometry_msgs/Twist
+
+Publishers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+Subscribers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+
+rostopic info /cmd_vel_mux/input/switch
+Type: geometry_msgs/Twist
+
+Publishers: None
+
+Subscribers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+
+rostopic info /cmd_vel_mux/input/teleop
+Type: geometry_msgs/Twist
+
+Publishers: None
+
+Subscribers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+
+rostopic info /cmd_vel_mux/parameter_descriptions
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+Subscribers: None
+
+
+rostopic info /cmd_vel_mux/parameter_updates
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+Subscribers: None
+
+
+rostopic info /depthimage_to_laserscan/parameter_descriptions
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /laserscan_nodelet_manager (http://yangnie-HP:32849/)
+
+Subscribers: None
+
+
+rostopic info /depthimage_to_laserscan/parameter_updates
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /laserscan_nodelet_manager (http://yangnie-HP:32849/)
+
+Subscribers: None
+
+
+rostopic info /gazebo/link_states
+Type: gazebo_msgs/LinkStates
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: None
+
+
+rostopic info /gazebo/model_states
+Type: gazebo_msgs/ModelStates
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: None
+
+
+rostopic info /gazebo/parameter_descriptions
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: None
+
+
+rostopic info /gazebo/parameter_updates
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: None
+
+
+rostopic info /gazebo/set_link_state
+Type: gazebo_msgs/LinkState
+
+Publishers: None
+
+Subscribers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+
+rostopic info /gazebo/set_model_state
+Type: gazebo_msgs/ModelState
+
+Publishers: None
+
+Subscribers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+
+rostopic info /initialpose
+Type: geometry_msgs/PoseWithCovarianceStamped
+
+Publishers: 
+ * /rviz (http://yangnie-HP:39443/)
+
+Subscribers: 
+ * /amcl (http://yangnie-HP:37329/)
+
+
+rostopic info /joint_states
+Type: sensor_msgs/JointState
+
+Publishers: 
+ * /joint_state_publisher (http://yangnie-HP:44507/)
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: 
+ * /robot_state_publisher (http://yangnie-HP:40637/)
+
+
+rostopic info /kobuki_safety_controller/disable
+Type: std_msgs/Empty
+
+Publishers: None
+
+Subscribers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+
+rostopic info /kobuki_safety_controller/enable
+Type: std_msgs/Empty
+
+Publishers: None
+
+Subscribers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+
+rostopic info /kobuki_safety_controller/reset
+Type: std_msgs/Empty
+
+Publishers: None
+
+Subscribers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+
+rostopic info /laserscan_nodelet_manager/bond
+Type: bond/Status
+
+Publishers: 
+ * /laserscan_nodelet_manager (http://yangnie-HP:32849/)
+ * /depthimage_to_laserscan (http://yangnie-HP:35601/)
+
+Subscribers: 
+ * /laserscan_nodelet_manager (http://yangnie-HP:32849/)
+ * /depthimage_to_laserscan (http://yangnie-HP:35601/)
+
+
+rostopic info /map
+Type: nav_msgs/OccupancyGrid
+
+Publishers: 
+ * /map_server (http://yangnie-HP:42253/)
+
+Subscribers: 
+ * /rviz (http://yangnie-HP:39443/)
+ * /move_base (http://yangnie-HP:44163/)
+
+
+rostopic info /map_metadata
+Type: nav_msgs/MapMetaData
+
+Publishers: 
+ * /map_server (http://yangnie-HP:42253/)
+
+Subscribers: None
+
+
+rostopic info /map_updates
+Type: map_msgs/OccupancyGridUpdate
+
+Publishers: None
+
+Subscribers: 
+ * /rviz (http://yangnie-HP:39443/)
+
+
+rostopic info /mobile_base/commands/motor_power
+Type: kobuki_msgs/MotorPower
+
+Publishers: None
+
+Subscribers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+
+rostopic info /mobile_base/commands/reset_odometry
+Type: std_msgs/Empty
+
+Publishers: None
+
+Subscribers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+
+rostopic info /mobile_base/commands/velocity
+Type: geometry_msgs/Twist
+
+Publishers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+Subscribers: 
+ * /gazebo (http://yangnie-HP:44683/)
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+
+rostopic info /mobile_base/events/bumper
+Type: kobuki_msgs/BumperEvent
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+
+rostopic info /mobile_base/events/cliff
+Type: kobuki_msgs/CliffEvent
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+
+rostopic info /mobile_base/events/wheel_drop
+Type: kobuki_msgs/WheelDropEvent
+
+Publishers: None
+
+Subscribers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+
+rostopic info /mobile_base/sensors/bumper_pointcloud
+Type: sensor_msgs/PointCloud2
+
+Publishers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+Subscribers: 
+ * /rviz (http://yangnie-HP:39443/)
+ * /move_base (http://yangnie-HP:44163/)
+
+
+rostopic info /mobile_base/sensors/core
+Type: kobuki_msgs/SensorState
+
+Publishers: None
+
+Subscribers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+
+rostopic info /mobile_base/sensors/imu_data
+Type: sensor_msgs/Imu
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: None
+
+
+rostopic info /mobile_base_nodelet_manager/bond
+Type: bond/Status
+
+Publishers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+ * /cmd_vel_mux (http://yangnie-HP:45365/)
+ * /bumper2pointcloud (http://yangnie-HP:35163/)
+ * /navigation_velocity_smoother (http://yangnie-HP:33191/)
+ * /kobuki_safety_controller (http://yangnie-HP:36537/)
+
+Subscribers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+ * /cmd_vel_mux (http://yangnie-HP:45365/)
+ * /bumper2pointcloud (http://yangnie-HP:35163/)
+ * /navigation_velocity_smoother (http://yangnie-HP:33191/)
+ * /kobuki_safety_controller (http://yangnie-HP:36537/)
+
+
+rostopic info /move_base/DWAPlannerROS/cost_cloud
+Type: sensor_msgs/PointCloud2
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: 
+ * /rviz (http://yangnie-HP:39443/)
+
+
+rostopic info /move_base/DWAPlannerROS/global_plan
+Type: nav_msgs/Path
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: 
+ * /rviz (http://yangnie-HP:39443/)
+
+
+rostopic info /move_base/DWAPlannerROS/local_plan
+Type: nav_msgs/Path
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: 
+ * /rviz (http://yangnie-HP:39443/)
+
+
+rostopic info /move_base/DWAPlannerROS/parameter_descriptions
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/DWAPlannerROS/parameter_updates
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/DWAPlannerROS/trajectory_cloud
+Type: sensor_msgs/PointCloud2
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: 
+ * /rviz (http://yangnie-HP:39443/)
+
+
+rostopic info /move_base/NavfnROS/plan
+Type: nav_msgs/Path
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/cancel
+Type: actionlib_msgs/GoalID
+
+Publishers: 
+ * /pick_objects (http://yangnie-HP:43117/)
+
+Subscribers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+
+rostopic info /move_base/current_goal
+Type: geometry_msgs/PoseStamped
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/feedback
+Type: move_base_msgs/MoveBaseActionFeedback
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: 
+ * /pick_objects (http://yangnie-HP:43117/)
+
+
+rostopic info /move_base/global_costmap/costmap
+Type: nav_msgs/OccupancyGrid
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: 
+ * /rviz (http://yangnie-HP:39443/)
+
+
+rostopic info /move_base/global_costmap/costmap_updates
+Type: map_msgs/OccupancyGridUpdate
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: 
+ * /rviz (http://yangnie-HP:39443/)
+
+
+rostopic info /move_base/global_costmap/footprint
+Type: geometry_msgs/PolygonStamped
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+
+rostopic info /move_base/global_costmap/inflation_layer/parameter_descriptions
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/global_costmap/inflation_layer/parameter_updates
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/global_costmap/obstacle_layer/clearing_endpoints
+Type: sensor_msgs/PointCloud
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/global_costmap/obstacle_layer/parameter_descriptions
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/global_costmap/obstacle_layer/parameter_updates
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/global_costmap/parameter_descriptions
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/global_costmap/parameter_updates
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/global_costmap/static_layer/parameter_descriptions
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/global_costmap/static_layer/parameter_updates
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/goal
+Type: move_base_msgs/MoveBaseActionGoal
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+ * /pick_objects (http://yangnie-HP:43117/)
+
+Subscribers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+
+rostopic info /move_base/local_costmap/costmap
+Type: nav_msgs/OccupancyGrid
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: 
+ * /rviz (http://yangnie-HP:39443/)
+
+
+rostopic info /move_base/local_costmap/costmap_updates
+Type: map_msgs/OccupancyGridUpdate
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: 
+ * /rviz (http://yangnie-HP:39443/)
+
+
+rostopic info /move_base/local_costmap/footprint
+Type: geometry_msgs/PolygonStamped
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+
+rostopic info /move_base/local_costmap/inflation_layer/parameter_descriptions
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/local_costmap/inflation_layer/parameter_updates
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/local_costmap/obstacle_layer/clearing_endpoints
+Type: sensor_msgs/PointCloud
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/local_costmap/obstacle_layer/parameter_descriptions
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/local_costmap/obstacle_layer/parameter_updates
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/local_costmap/parameter_descriptions
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/local_costmap/parameter_updates
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/parameter_descriptions
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/parameter_updates
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: None
+
+
+rostopic info /move_base/result
+Type: move_base_msgs/MoveBaseActionResult
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: 
+ * /pick_objects (http://yangnie-HP:43117/)
+
+
+rostopic info /move_base/status
+Type: actionlib_msgs/GoalStatusArray
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: 
+ * /pick_objects (http://yangnie-HP:43117/)
+
+
+rostopic info /move_base_simple/goal
+Type: geometry_msgs/PoseStamped
+
+Publishers: 
+ * /rviz (http://yangnie-HP:39443/)
+
+Subscribers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+
+rostopic info /navigation_velocity_smoother/parameter_descriptions
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+Subscribers: None
+
+
+rostopic info /navigation_velocity_smoother/parameter_updates
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+Subscribers: None
+
+
+rostopic info /navigation_velocity_smoother/raw_cmd_vel
+Type: geometry_msgs/Twist
+
+Publishers: 
+ * /move_base (http://yangnie-HP:44163/)
+
+Subscribers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+
+
+rostopic info /notifying
+Type: pick_objects/Notify
+
+Publishers: 
+ * /pick_objects (http://yangnie-HP:43117/)
+
+Subscribers: 
+ * /add_marker (http://yangnie-HP:42829/)
+
+
+rostopic info /odom
+Type: nav_msgs/Odometry
+
+Publishers: 
+ * /gazebo (http://yangnie-HP:44683/)
+
+Subscribers: 
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+ * /move_base (http://yangnie-HP:44163/)
+
+
+rostopic info /particlecloud
+Type: geometry_msgs/PoseArray
+
+Publishers: 
+ * /amcl (http://yangnie-HP:37329/)
+
+Subscribers: 
+ * /rviz (http://yangnie-HP:39443/)
+
+
+rostopic info /rosout
+Type: rosgraph_msgs/Log
+
+Publishers: 
+ * /robot_state_publisher (http://yangnie-HP:40637/)
+ * /cmd_vel_mux (http://yangnie-HP:45365/)
+ * /bumper2pointcloud (http://yangnie-HP:35163/)
+ * /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+ * /depthimage_to_laserscan (http://yangnie-HP:35601/)
+ * /laserscan_nodelet_manager (http://yangnie-HP:32849/)
+ * /rviz (http://yangnie-HP:39443/)
+ * /joint_state_publisher (http://yangnie-HP:44507/)
+ * /gazebo (http://yangnie-HP:44683/)
+ * /map_server (http://yangnie-HP:42253/)
+ * /amcl (http://yangnie-HP:37329/)
+ * /navigation_velocity_smoother (http://yangnie-HP:33191/)
+ * /kobuki_safety_controller (http://yangnie-HP:36537/)
+ * /move_base (http://yangnie-HP:44163/)
+ * /add_marker (http://yangnie-HP:42829/)
+ * /pick_objects (http://yangnie-HP:43117/)
+
+Subscribers: 
+ * /rosout (http://yangnie-HP:38099/)
+
+
+rostopic info /rosout_agg
+Type: rosgraph_msgs/Log
+
+Publishers: 
+ * /rosout (http://yangnie-HP:38099/)
+
+Subscribers: None
+
+
+rostopic info /scan
+Type: sensor_msgs/LaserScan
+
+Publishers: 
+ * /laserscan_nodelet_manager (http://yangnie-HP:32849/)
+
+Subscribers: 
+ * /rviz (http://yangnie-HP:39443/)
+ * /amcl (http://yangnie-HP:37329/)
+ * /move_base (http://yangnie-HP:44163/)
+
+
+rostopic info /tf
+Type: tf2_msgs/TFMessage
+
+Publishers: 
+ * /robot_state_publisher (http://yangnie-HP:40637/)
+ * /gazebo (http://yangnie-HP:44683/)
+ * /amcl (http://yangnie-HP:37329/)
+
+Subscribers: 
+ * /rviz (http://yangnie-HP:39443/)
+ * /move_base (http://yangnie-HP:44163/)
+ * /amcl (http://yangnie-HP:37329/)
+
+
+rostopic info /tf_static
+Type: tf2_msgs/TFMessage
+
+Publishers: 
+ * /robot_state_publisher (http://yangnie-HP:40637/)
+
+Subscribers: 
+ * /rviz (http://yangnie-HP:39443/)
+ * /move_base (http://yangnie-HP:44163/)
+ * /amcl (http://yangnie-HP:37329/)
+
+
+rostopic info /visualization_marker
+Type: visualization_msgs/Marker
+
+Publishers: 
+ * /add_marker (http://yangnie-HP:42829/)
+
+Subscribers: 
+ * /rviz (http://yangnie-HP:39443/)
+
+
+rostopic info /visualization_marker_array
+Type: visualization_msgs/MarkerArray
+
+Publishers: None
+
+Subscribers: 
+ * /rviz (http://yangnie-HP:39443/)
+
+
