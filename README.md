@@ -2,7 +2,7 @@
 
 ##  Abstract:
 
-Home Service project was implemented with a Robot, Map and virtual object in ROS Gazebo simulation environment. The turtlebot robot, a built map, slam-mapping algorithm, AMCL navigation algorithm and ROS marker were used in it. it simulated a full home service robot capable of navigating to pick up and deliver virtual objects. The result for the simulated robot will be discussed in this article.
+Home Service project was implemented with a Robot, Map and virtual object in ROS Gazebo simulation environment. The turtlebot robot, a custom built map, slam-mapping algorithm, AMCL navigation algorithm and ROS marker were used in it. it simulated a full home service robot capable of navigating to pick up and deliver virtual objects. The result for the simulated robot will be discussed in this article.
 
 ## Introduction:
 
@@ -150,9 +150,9 @@ pick_object:
 
 The positions.yaml file is located under homeservice/config folder.
 
-Creating a pick_objects.sh script file which includes turlebot, AMCL, rviz and pick_objects node.
+Creating a pick_objects.sh script file which includes turlebot, AMCL, rviz and pick_objects nodes.
 
-<img src="images/pick_object.png" width="70%" height="70%" title="map">
+<img src="images/pick_object.png" width="70%" height="70%" title="pick objects">
 
 
 
@@ -173,18 +173,18 @@ The two C++ classes were created in the add_markers package, they are:
 1. marker class: It wrapped ROS marker base class and supported a higher level function call to create a marker.
 2. marker_msg class: It include publisher and subscriber with callback function.
 
-Creating a add_marker.sh script file which includes turlebot, AMCL, rviz and add_markers node.
+Creating a add_marker.sh script file which includes turlebot, AMCL, rviz and add_markers nodes.
 
-<img src="images/add_marker.png" width="70%" height="70%" title="map">
+<img src="images/add_marker.png" width="70%" height="70%" title="add marker">
 
 #### Integrating all 6 step codes into one home service package
 
 To complete this task, these four tasks need to add:
 
-- Initially show the marker at the pickup zone
-- Hide the marker once your robot reaches the pickup zone
-- Wait 5 seconds to simulate a pickup
-- Show the marker at the drop off zone once your robot reaches it
+1. Initially show the marker at the pickup zone
+2. Hide the marker once your robot reaches the pickup zone
+3. Wait 5 seconds to simulate a pickup
+4. Show the marker at the drop off zone once your robot reaches it
 
 A Notify message was created to build a communication between **add_markers** and **pick_objects** nodes.
 
@@ -202,6 +202,33 @@ string message      # message text
 The Notify.msg file is located  under pick_objects/msg folder.
 
 The pick_objects code published the goal position message, and add_marker code subscribed notifying message and depending on these goal position data to show a marker on rviz window.
+
+Creating a home_service.sh script file which includes turlebot, AMCL, rviz, pick_objects and add_markers nodes.
+
+The nodes and topics relationship diagram as:
+
+
+
+<img src="images/rosgraph.png" width="100%" height="100%" title="rosgraph">
+
+
+
+## Results:
+
+The robot in this project complete these jobs successfully:
+
+- Initially show the marker at the pickup zone
+- Hide the marker once your robot reaches the pickup zone
+- Wait 5 seconds to simulate a pickup
+- Show the marker at the drop off zone once your robot reaches it
+
+The pick_objects node loaded three different sets of pickup and drop off positions, then continued to run to different position smoothly.
+
+Video link for Gripper base testing (https://youtu.be/wN6wdWHsIs8)
+
+[![Watch the video](images/home_service.jpg)](https://youtu.be/wN6wdWHsIs8)
+
+
 
 
 
