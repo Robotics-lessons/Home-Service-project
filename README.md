@@ -177,5 +177,31 @@ Creating a add_marker.sh script file which includes turlebot, AMCL, rviz and add
 
 <img src="images/add_marker.png" width="70%" height="70%" title="map">
 
-#### Integrating all 6 steps code into home service package
+#### Integrating all 6 step codes into one home service package
+
+To complete this task, these four tasks need to add:
+
+- Initially show the marker at the pickup zone
+- Hide the marker once your robot reaches the pickup zone
+- Wait 5 seconds to simulate a pickup
+- Show the marker at the drop off zone once your robot reaches it
+
+A Notify message was created to build a communication between **add_markers** and **pick_objects** nodes.
+
+It defined as:
+
+````
+Header header       # header message
+string name         # message name
+float32 x           # position x
+float32 y           # position y
+int8 action         # action code
+string message      # message text
+````
+
+The Notify.msg file is located  under pick_objects/msg folder.
+
+The pick_objects code published the goal position message, and add_marker code subscribed notifying message and depending on these goal position data to show a marker on rviz window.
+
+
 
