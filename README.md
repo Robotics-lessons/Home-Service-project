@@ -224,10 +224,21 @@ The robot in this project complete these jobs successfully:
 
 The pick_objects node loaded three different sets of pickup and drop off positions, then continued to run to different position smoothly.
 
-Video link for Gripper base testing (https://youtu.be/wN6wdWHsIs8)
+Video link for Home Service project demo (https://youtu.be/wN6wdWHsIs8)
 
-[![Watch the video](images/home_service.jpg)](https://youtu.be/wN6wdWHsIs8)
+[![Watch the video](images/home_service.png)](https://youtu.be/wN6wdWHsIs8)
 
+## Discussion
+An another custom map was built to test wall follower alorithm and code. It icluded five rooms with 5 doors. The wall follower code was failed to scan these room structure. There was no digital map generated from this wall follower code.
+
+<img src="images/house.png" width="60%" height="60%" title="rosgraph">
+
+
+
+
+
+## Conclusion / Future Work
+The current alorithm and codes were working in simple map environment very well, but it didn't do good job for real world. The wall follower alorithm and code definitly need to modify to enhance mapping process. Future work will be: using Jetson TX2 camera to scan the real room structure,  add four wheels, motor and control part on it to make a moving home service robot.
 
 
 
