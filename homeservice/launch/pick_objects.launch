@@ -2,7 +2,7 @@
 
 <launch>
 	<rosparam command="load" file="$(find homeservice)/config/positions.yaml" />
-    <node pkg="pick_objects" type="pick_objects" name="pick_objects"  output="screen">
+    <node pkg="pick_objects" type="pick_objects" name="pick_objects"  >
     </node>
 </launch>
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+	<rosparam command="load" file="$(find homeservice)/config/wall_follower.yaml" />
+    <node pkg="wall_follower" type="wall_follower" name="wall_follower"   output="screen">
+    </node>
+</launch>
+

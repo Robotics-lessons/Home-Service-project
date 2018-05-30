@@ -26,7 +26,7 @@ void goalPublish(float x, float y, float w, move_base_msgs::MoveBaseGoal &goal, 
   goal.target_pose.pose.position.x = x;
   goal.target_pose.pose.position.y = y;
   goal.target_pose.pose.orientation.w = w;
-  ROS_INFO("Sending the 1st goal; x=%g, y=%g, w=%g", x, y, w);
+  ROS_INFO("Sending the 1st goal; x=%g, y=%g, w=%g \n", x, y, w);
   ac.sendGoal(goal);  
 }
 
@@ -91,16 +91,16 @@ int main(int argc, char** argv){
      // Check if the robot reached its goal
      if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
      {
-       ROS_INFO("Great, the robot moved the first goal successfully!");
+       ROS_INFO("Great, the robot moved the first goal successfully! \n");
        notyfyPublish(start_goal_x, start_goal_y, visualization_msgs::Marker::DELETE, notify,"The robot moved the pick up position successfully!", notifying_pub);
 
-       ROS_INFO("Waiting for 5 sec");
+       ROS_INFO("Waiting for 5 sec \n");
        ros::Duration(5.0).sleep();
 
        goalPublish(end_goal_x, end_goal_y, 1.0, goal, ac);
        ac.waitForResult();
        if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED) {
-         ROS_INFO("Great, the robot moved to the second goal successfully!");
+         ROS_INFO("Great, the robot moved to the second goal successfully! \n");
          notyfyPublish(end_goal_x, end_goal_y, visualization_msgs::Marker::ADD, notify,"The robot moved to the drop off position successfully!", notifying_pub);
 
        } else {
@@ -110,7 +110,7 @@ int main(int argc, char** argv){
      else {
        ROS_INFO("The base failed to move forward 1 meter for some reason");
      }
-     ROS_INFO("Waiting for 6 sec");
+     ROS_INFO("Waiting for 6 sec, do next run \n");
      ros::Duration(6.0).sleep();
 
      i++;

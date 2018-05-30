@@ -5,6 +5,6 @@ xterm -e " roslaunch homeservice homeservice.launch world_file:=$HOME/catkin_ws/
 sleep 5
 xterm -e " roslaunch homeservice gmapping.launch " &
 #sleep 5
-xterm -e " rosrun wall_follower wall_follower " &
+xterm -e " roslaunch homeservice wall_follower.launch " 
 
 
