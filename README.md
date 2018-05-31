@@ -150,6 +150,27 @@ pick_object:
 
 The positions.yaml file is located under homeservice/config folder.
 
+This **rosparam** line needs to add in launch file.
+
+````
+<launch>
+	<rosparam command="load" file="$(find homeservice)/config/positions.yaml" />
+    <node pkg="pick_objects" type="pick_objects" name="pick_objects"  >
+    </node>
+</launch>
+````
+
+To retrieve the rosparam value, the codes were added in pick_objects.cpp:
+
+     std::string key = "/pick_object/run_" + NumberToString(i);
+     ROS_INFO("yaml key = %s", key.c_str());
+     if (!ros::param::has(key)) {
+        break;
+     }
+     n.param<float>(key + "/start_point/x", start_goal_x, 4.0);
+     n.param<float>(key + "/start_point/y", start_goal_y, 5.0);
+     n.param<float>(key + "/end_point/x", end_goal_x, 4.0);
+     n.param<float>(key + "/end_point/y", end_goal_y, 5.0);    
 Creating a pick_objects.sh script file which includes turlebot, AMCL, rviz and pick_objects nodes.
 
 <img src="images/pick_object.png" width="70%" height="70%" title="pick objects">
@@ -237,7 +258,7 @@ An another custom map was built to test wall follower alorithm and code. It iclu
 
 <img src="images/house-wall-follower.png" width="60%" height="60%" title="rosgraph">
 
-
+Debugging ROS node and topic are not easy job, special for a beginner. When starting to learn how to build a new project in the class, if a node and topic relationship diagram and list of node, topic information data in the project can be provided, the students will learn and know what is target they will build. And they can use these information as a reference to debug the code. This is the reason that Debug folder was created in this project, it stored node and topic relationship diagram and list of node, topic information for this project.
 
 ## Conclusion / Future Work
 The current alorithm and codes were working in simple map environment very well, but it didn't do good job for real world. The wall follower alorithm and code definitly need to modify to enhance mapping process. Future work will be: using Jetson TX2 camera to scan the real room structure,  add four wheels, motor and control part on it to make a moving home service robot.
