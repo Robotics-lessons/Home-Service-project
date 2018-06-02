@@ -1,0 +1,29 @@
+Set up catkin_ws for home service
+====================================
+1. mkdir -p ~/catkin_ws/src
+2. cd ~/catkin_ws/src
+3. catkin_init_workspace
+4. cd ~/catkin_ws
+5. catkin_make
+
+5.1. sudo apt-get update
+5.2. sudo apt-get install ros-kinetic-navigation
+
+6 if see error: Error: package 'move_base_msgs' not found
+sudo apt-get install ros-kinetic-move-base-msgs
+
+7.if see error: Could not find a package configuration file provided by "openslam_gmapping"
+sudo apt-get install ros-kinetic-openslam-gmapping
+
+8. if see error: Could not find a package configuration file provided by "joy"
+sudo apt-get install ros-kinetic-joy*
+
+9. if see error: resource not found: kobuki_description
+sudo apt-get install ros-kinetic-kobuki ros-kinetic-kobuki-core
+
+source ~/homeservice_ws/devel/setup.bash
+
+10. if see error: Failed to load nodelet [/depthimage_to_laserscan] 
+ sudo apt-get install ros-kinetic-turtlebot-gazebo
+
+

@@ -1,0 +1,5 @@
+Check GPU:  sudo ./tegrastats
+
+Check version: nvcc -V
+
+

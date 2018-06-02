@@ -1,0 +1,22 @@
+pick_object:
+  run_1:
+    start_point:
+      x: 4.0
+      y: 5
+    end_point:
+      x: -4.0
+      y: 6
+  run_2:
+    start_point:
+      x: 4.2
+      y: 6
+    end_point:
+      x: -4.2
+      y: 6.6
+  run_3:
+    start_point:
+      x: 3.6
+      y: 4
+    end_point:
+      x: -3.6
+      y: 6.8

@@ -1,0 +1,65 @@
+process[wall_follower-1]: started with pid [30563]
+[ INFO] [1527617224.348121392]: move_speed_percent = 1.000000 
+
+[ INFO] [1527617224.690119369, 426.775000000]: [ROBOT] FORWARD!, pre act count = 1 
+
+[ INFO] [1527617224.690147037, 426.775000000]: [ROBOT] Dam son: 0.857650 , following_wall = 0   
+[ INFO] [1527617224.790580811, 426.876000000]: [ROBOT] TURN_LEFT, pre act count = 1 
+
+[ INFO] [1527617224.990963997, 427.076000000]: [ROBOT] GO_RIGHT, pre act count = 2 
+
+[ INFO] [1527617224.990991359, 427.076000000]: [ROBOT] Dam son: 3.432157 , following_wall = 1  // [ROBOT] I am following wall and my max range > 2.0 Range Max: 3.432157 
+ 
+[ INFO] [1527617225.690444845, 427.775000000]: [ROBOT] HALT!, pre act count = 6 
+
+[ INFO] [1527617225.690472463, 427.775000000]: [ROBOT] Dam son: 0.800004 , following_wall = 0  // [ROBOT] I am goin' right!: thats_a_door = 0 
+ 
+[ INFO] [1527617225.790797921, 427.875000000]: [ROBOT] TURN_LEFT, pre act count = 1 
+
+[ INFO] [1527617225.891275122, 427.976000000]: [ROBOT] GO_RIGHT, pre act count = 1 
+
+[ INFO] [1527617225.891309596, 427.976000000]: [ROBOT] Dam son: 3.316107 , following_wall = 1  // [ROBOT] I am following wall and my max range > 2.0 Range Max: 3.316107 
+ 
+[ INFO] [1527617226.441730479, 428.525000000]: [ROBOT] HALT!, pre act count = 5 
+
+[ INFO] [1527617226.441768370, 428.525000000]: [ROBOT] Dam son: 3.267465 , following_wall = 0  // [ROBOT] I am goin' right!: thats_a_door = 0 
+ 
+[ INFO] [1527617226.543113974, 428.627000000]: [ROBOT] TURN_LEFT, pre act count = 1 
+
+[ INFO] [1527617226.641361739, 428.725000000]: [ROBOT] GO_RIGHT, pre act count = 1 
+
+[ INFO] [1527617226.641387340, 428.725000000]: [ROBOT] Dam son: 3.247378 , following_wall = 1  // [ROBOT] I am following wall and my max range > 2.0 Range Max: 3.247378 
+ 
+[ INFO] [1527617227.094756285, 429.177000000]: [ROBOT] HALT!, pre act count = 4 
+
+[ INFO] [1527617227.094786772, 429.177000000]: [ROBOT] Dam son: 3.248067 , following_wall = 0  // [ROBOT] I am goin' right!: thats_a_door = 0 
+ 
+[ INFO] [1527617227.193223718, 429.275000000]: [ROBOT] TURN_LEFT, pre act count = 1 
+
+[ INFO] [1527617227.294737175, 429.377000000]: [ROBOT] GO_RIGHT, pre act count = 1 
+
+[ INFO] [1527617227.294758729, 429.377000000]: [ROBOT] Dam son: 3.221339 , following_wall = 1  // [ROBOT] I am following wall and my max range > 2.0 Range Max: 3.221339 
+ 
+[ INFO] [1527617236.656459811, 438.727000000]: [ROBOT] HALT!, pre act count = 86 
+
+[ INFO] [1527617236.656491700, 438.727000000]: [ROBOT] Dam son: 0.556450 , following_wall = 0  // [ROBOT] I am goin' right!: thats_a_door = 0 
+ 
+[ INFO] [1527617236.757174642, 438.827000000]: [ROBOT] TURN_LEFT, pre act count = 1 
+
+[ INFO] [1527617236.957343816, 439.027000000]: [ROBOT] FORWARD!, pre act count = 2 
+
+[ INFO] [1527617236.957369603, 439.027000000]: [ROBOT] Dam son: 0.615153 , following_wall = 1   
+[ INFO] [1527617237.056206786, 439.126000000]: [ROBOT] TURN_LEFT, pre act count = 1 
+
+[ INFO] [1527617237.255893688, 439.325000000]: [ROBOT] FORWARD!, pre act count = 2 
+
+[ INFO] [1527617237.255941308, 439.326000000]: [ROBOT] Dam son: 0.696317 , following_wall = 1   
+[ INFO] [1527617237.555658222, 439.625000000]: [ROBOT] TURN_LEFT, pre act count = 3 
+
+^C[wall_follower-1] killing on exit
+terminate called after throwing an instance of 'boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::lock_error> >'
+  what():  boost: mutex lock failed in pthread_mutex_lock: Invalid argument
+shutting down processing monitor...
+... shutting down processing monitor complete
+done
+

@@ -1,0 +1,1626 @@
+rosnode list
+/add_marker
+/amcl
+/bumper2pointcloud
+/cmd_vel_mux
+/depthimage_to_laserscan
+/gazebo
+/joint_state_publisher
+/kobuki_safety_controller
+/laserscan_nodelet_manager
+/map_server
+/mobile_base_nodelet_manager
+/move_base
+/navigation_velocity_smoother
+/pick_objects
+/robot_state_publisher
+/rosout
+/rviz
+
+rosnode info /add_marker
+--------------------------------------------------------------------------------
+Node [/add_marker]
+Publications: 
+ * /rosout [rosgraph_msgs/Log]
+ * /visualization_marker [visualization_msgs/Marker]
+
+Subscriptions: 
+ * /clock [rosgraph_msgs/Clock]
+ * /notifying [pick_objects/Notify]
+
+Services: 
+ * /add_marker/get_loggers
+ * /add_marker/set_logger_level
+
+
+contacting node http://yangnie-HP:42829/ ...
+Pid: 22672
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /visualization_marker
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /notifying
+    * to: /pick_objects (http://yangnie-HP:43117/)
+    * direction: inbound
+    * transport: TCPROS
+
+rosnode info /amcl
+--------------------------------------------------------------------------------
+Node [/amcl]
+Publications: 
+ * /amcl/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /amcl/parameter_updates [dynamic_reconfigure/Config]
+ * /amcl_pose [geometry_msgs/PoseWithCovarianceStamped]
+ * /particlecloud [geometry_msgs/PoseArray]
+ * /rosout [rosgraph_msgs/Log]
+ * /tf [tf2_msgs/TFMessage]
+
+Subscriptions: 
+ * /clock [rosgraph_msgs/Clock]
+ * /initialpose [geometry_msgs/PoseWithCovarianceStamped]
+ * /scan [sensor_msgs/LaserScan]
+ * /tf [tf2_msgs/TFMessage]
+ * /tf_static [tf2_msgs/TFMessage]
+
+Services: 
+ * /amcl/get_loggers
+ * /amcl/set_logger_level
+ * /amcl/set_parameters
+ * /global_localization
+ * /request_nomotion_update
+ * /set_map
+
+
+contacting node http://yangnie-HP:37329/ ...
+Pid: 21504
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /tf
+    * to: /amcl
+    * direction: outbound
+    * transport: INTRAPROCESS
+ * topic: /tf
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /tf
+    * to: /move_base
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /particlecloud
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /tf
+    * to: /amcl (http://yangnie-HP:37329/)
+    * direction: inbound
+    * transport: INTRAPROCESS
+ * topic: /tf
+    * to: /robot_state_publisher (http://yangnie-HP:40637/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /tf
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /tf_static
+    * to: /robot_state_publisher (http://yangnie-HP:40637/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /scan
+    * to: /laserscan_nodelet_manager (http://yangnie-HP:32849/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /initialpose
+    * to: /rviz (http://yangnie-HP:39443/)
+    * direction: inbound
+    * transport: TCPROS
+
+rosnode info /bumper2pointcloud
+--------------------------------------------------------------------------------
+Node [/bumper2pointcloud]
+Publications: 
+ * /mobile_base_nodelet_manager/bond [bond/Status]
+ * /rosout [rosgraph_msgs/Log]
+
+Subscriptions: 
+ * /clock [rosgraph_msgs/Clock]
+ * /mobile_base_nodelet_manager/bond [bond/Status]
+
+Services: 
+ * /bumper2pointcloud/get_loggers
+ * /bumper2pointcloud/set_logger_level
+
+
+contacting node http://yangnie-HP:35163/ ...
+Pid: 20653
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /bumper2pointcloud
+    * direction: outbound
+    * transport: INTRAPROCESS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /mobile_base_nodelet_manager
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /cmd_vel_mux
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /kobuki_safety_controller
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /navigation_velocity_smoother
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /bumper2pointcloud (http://yangnie-HP:35163/)
+    * direction: inbound
+    * transport: INTRAPROCESS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /cmd_vel_mux (http://yangnie-HP:45365/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /kobuki_safety_controller (http://yangnie-HP:36537/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /navigation_velocity_smoother (http://yangnie-HP:33191/)
+    * direction: inbound
+    * transport: TCPROS
+
+rosnode info /cmd_vel_mux
+--------------------------------------------------------------------------------
+Node [/cmd_vel_mux]
+Publications: 
+ * /mobile_base_nodelet_manager/bond [bond/Status]
+ * /rosout [rosgraph_msgs/Log]
+
+Subscriptions: 
+ * /clock [rosgraph_msgs/Clock]
+ * /mobile_base_nodelet_manager/bond [bond/Status]
+
+Services: 
+ * /cmd_vel_mux/get_loggers
+ * /cmd_vel_mux/set_logger_level
+
+
+contacting node http://yangnie-HP:45365/ ...
+Pid: 20638
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /cmd_vel_mux
+    * direction: outbound
+    * transport: INTRAPROCESS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /mobile_base_nodelet_manager
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /bumper2pointcloud
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /navigation_velocity_smoother
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /kobuki_safety_controller
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /cmd_vel_mux (http://yangnie-HP:45365/)
+    * direction: inbound
+    * transport: INTRAPROCESS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /bumper2pointcloud (http://yangnie-HP:35163/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /kobuki_safety_controller (http://yangnie-HP:36537/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /navigation_velocity_smoother (http://yangnie-HP:33191/)
+    * direction: inbound
+    * transport: TCPROS
+
+rosnode info /depthimage_to_laserscan
+--------------------------------------------------------------------------------
+Node [/depthimage_to_laserscan]
+Publications: 
+ * /laserscan_nodelet_manager/bond [bond/Status]
+ * /rosout [rosgraph_msgs/Log]
+
+Subscriptions: 
+ * /clock [rosgraph_msgs/Clock]
+ * /laserscan_nodelet_manager/bond [bond/Status]
+
+Services: 
+ * /depthimage_to_laserscan/get_loggers
+ * /depthimage_to_laserscan/set_logger_level
+
+
+contacting node http://yangnie-HP:35601/ ...
+Pid: 20676
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /laserscan_nodelet_manager/bond
+    * to: /depthimage_to_laserscan
+    * direction: outbound
+    * transport: INTRAPROCESS
+ * topic: /laserscan_nodelet_manager/bond
+    * to: /laserscan_nodelet_manager
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /laserscan_nodelet_manager/bond
+    * to: /depthimage_to_laserscan (http://yangnie-HP:35601/)
+    * direction: inbound
+    * transport: INTRAPROCESS
+ * topic: /laserscan_nodelet_manager/bond
+    * to: /laserscan_nodelet_manager (http://yangnie-HP:32849/)
+    * direction: inbound
+    * transport: TCPROS
+
+rosnode info /gazebo
+--------------------------------------------------------------------------------
+Node [/gazebo]
+Publications: 
+ * /camera/depth/camera_info [sensor_msgs/CameraInfo]
+ * /camera/depth/image_raw [sensor_msgs/Image]
+ * /camera/depth/points [sensor_msgs/PointCloud2]
+ * /camera/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /camera/parameter_updates [dynamic_reconfigure/Config]
+ * /camera/rgb/camera_info [sensor_msgs/CameraInfo]
+ * /camera/rgb/image_raw [sensor_msgs/Image]
+ * /camera/rgb/image_raw/compressed [sensor_msgs/CompressedImage]
+ * /camera/rgb/image_raw/compressed/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /camera/rgb/image_raw/compressed/parameter_updates [dynamic_reconfigure/Config]
+ * /camera/rgb/image_raw/compressedDepth [sensor_msgs/CompressedImage]
+ * /camera/rgb/image_raw/compressedDepth/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /camera/rgb/image_raw/compressedDepth/parameter_updates [dynamic_reconfigure/Config]
+ * /camera/rgb/image_raw/theora [theora_image_transport/Packet]
+ * /camera/rgb/image_raw/theora/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /camera/rgb/image_raw/theora/parameter_updates [dynamic_reconfigure/Config]
+ * /clock [rosgraph_msgs/Clock]
+ * /gazebo/link_states [gazebo_msgs/LinkStates]
+ * /gazebo/model_states [gazebo_msgs/ModelStates]
+ * /gazebo/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /gazebo/parameter_updates [dynamic_reconfigure/Config]
+ * /joint_states [sensor_msgs/JointState]
+ * /mobile_base/events/bumper [kobuki_msgs/BumperEvent]
+ * /mobile_base/events/cliff [kobuki_msgs/CliffEvent]
+ * /mobile_base/sensors/imu_data [sensor_msgs/Imu]
+ * /odom [nav_msgs/Odometry]
+ * /rosout [rosgraph_msgs/Log]
+ * /tf [tf2_msgs/TFMessage]
+
+Subscriptions: 
+ * /clock [rosgraph_msgs/Clock]
+ * /gazebo/set_link_state [unknown type]
+ * /gazebo/set_model_state [unknown type]
+ * /mobile_base/commands/motor_power [unknown type]
+ * /mobile_base/commands/reset_odometry [unknown type]
+ * /mobile_base/commands/velocity [geometry_msgs/Twist]
+
+Services: 
+ * /camera/rgb/image_raw/compressed/set_parameters
+ * /camera/rgb/image_raw/compressedDepth/set_parameters
+ * /camera/rgb/image_raw/theora/set_parameters
+ * /camera/set_camera_info
+ * /camera/set_parameters
+ * /gazebo/apply_body_wrench
+ * /gazebo/apply_joint_effort
+ * /gazebo/clear_body_wrenches
+ * /gazebo/clear_joint_forces
+ * /gazebo/delete_light
+ * /gazebo/delete_model
+ * /gazebo/get_joint_properties
+ * /gazebo/get_light_properties
+ * /gazebo/get_link_properties
+ * /gazebo/get_link_state
+ * /gazebo/get_loggers
+ * /gazebo/get_model_properties
+ * /gazebo/get_model_state
+ * /gazebo/get_physics_properties
+ * /gazebo/get_world_properties
+ * /gazebo/pause_physics
+ * /gazebo/reset_simulation
+ * /gazebo/reset_world
+ * /gazebo/set_joint_properties
+ * /gazebo/set_light_properties
+ * /gazebo/set_link_properties
+ * /gazebo/set_link_state
+ * /gazebo/set_logger_level
+ * /gazebo/set_model_configuration
+ * /gazebo/set_model_state
+ * /gazebo/set_parameters
+ * /gazebo/set_physics_properties
+ * /gazebo/spawn_sdf_model
+ * /gazebo/spawn_urdf_model
+ * /gazebo/unpause_physics
+
+
+contacting node http://yangnie-HP:44683/ ...
+Pid: 20836
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo
+    * direction: outbound
+    * transport: INTRAPROCESS
+ * topic: /clock
+    * to: /joint_state_publisher
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /robot_state_publisher
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /cmd_vel_mux
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /bumper2pointcloud
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /mobile_base_nodelet_manager
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /depthimage_to_laserscan
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /laserscan_nodelet_manager
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /map_server
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /move_base
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /amcl
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /navigation_velocity_smoother
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /kobuki_safety_controller
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /add_marker
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /pick_objects
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /camera/rgb/image_raw
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /camera/rgb/camera_info
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /camera/depth/image_raw
+    * to: /laserscan_nodelet_manager
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /camera/depth/camera_info
+    * to: /laserscan_nodelet_manager
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /tf
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /tf
+    * to: /move_base
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /tf
+    * to: /amcl
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /joint_states
+    * to: /robot_state_publisher
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /odom
+    * to: /mobile_base_nodelet_manager
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /odom
+    * to: /move_base
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base/events/cliff
+    * to: /mobile_base_nodelet_manager
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base/events/bumper
+    * to: /mobile_base_nodelet_manager
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: INTRAPROCESS
+ * topic: /mobile_base/commands/velocity
+    * to: /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+    * direction: inbound
+    * transport: TCPROS
+
+rosnode info /joint_state_publisher
+--------------------------------------------------------------------------------
+Node [/joint_state_publisher]
+Publications: 
+ * /joint_states [sensor_msgs/JointState]
+ * /rosout [rosgraph_msgs/Log]
+
+Subscriptions: 
+ * /clock [rosgraph_msgs/Clock]
+
+Services: 
+ * /joint_state_publisher/get_loggers
+ * /joint_state_publisher/set_logger_level
+
+
+contacting node http://yangnie-HP:44507/ ...
+Pid: 20593
+Connections:
+ * topic: /joint_states
+    * to: /robot_state_publisher
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+
+rosnode info /kobuki_safety_controller
+--------------------------------------------------------------------------------
+Node [/kobuki_safety_controller]
+Publications: 
+ * /mobile_base_nodelet_manager/bond [bond/Status]
+ * /rosout [rosgraph_msgs/Log]
+
+Subscriptions: 
+ * /clock [rosgraph_msgs/Clock]
+ * /mobile_base_nodelet_manager/bond [bond/Status]
+
+Services: 
+ * /kobuki_safety_controller/get_loggers
+ * /kobuki_safety_controller/set_logger_level
+
+
+contacting node http://yangnie-HP:36537/ ...
+Pid: 21527
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /kobuki_safety_controller
+    * direction: outbound
+    * transport: INTRAPROCESS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /navigation_velocity_smoother
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /cmd_vel_mux
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /bumper2pointcloud
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /mobile_base_nodelet_manager
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /kobuki_safety_controller (http://yangnie-HP:36537/)
+    * direction: inbound
+    * transport: INTRAPROCESS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /bumper2pointcloud (http://yangnie-HP:35163/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /cmd_vel_mux (http://yangnie-HP:45365/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /navigation_velocity_smoother (http://yangnie-HP:33191/)
+    * direction: inbound
+    * transport: TCPROS
+
+rosnode info /laserscan_nodelet_manager
+--------------------------------------------------------------------------------
+Node [/laserscan_nodelet_manager]
+Publications: 
+ * /depthimage_to_laserscan/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /depthimage_to_laserscan/parameter_updates [dynamic_reconfigure/Config]
+ * /laserscan_nodelet_manager/bond [bond/Status]
+ * /rosout [rosgraph_msgs/Log]
+ * /scan [sensor_msgs/LaserScan]
+
+Subscriptions: 
+ * /camera/depth/camera_info [sensor_msgs/CameraInfo]
+ * /camera/depth/image_raw [sensor_msgs/Image]
+ * /clock [rosgraph_msgs/Clock]
+ * /laserscan_nodelet_manager/bond [bond/Status]
+
+Services: 
+ * /depthimage_to_laserscan/set_parameters
+ * /laserscan_nodelet_manager/get_loggers
+ * /laserscan_nodelet_manager/list
+ * /laserscan_nodelet_manager/load_nodelet
+ * /laserscan_nodelet_manager/set_logger_level
+ * /laserscan_nodelet_manager/unload_nodelet
+
+
+contacting node http://yangnie-HP:32849/ ...
+Pid: 20669
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /scan
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /scan
+    * to: /amcl
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /scan
+    * to: /move_base
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /laserscan_nodelet_manager/bond
+    * to: /laserscan_nodelet_manager
+    * direction: outbound
+    * transport: INTRAPROCESS
+ * topic: /laserscan_nodelet_manager/bond
+    * to: /depthimage_to_laserscan
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /laserscan_nodelet_manager/bond
+    * to: /laserscan_nodelet_manager (http://yangnie-HP:32849/)
+    * direction: inbound
+    * transport: INTRAPROCESS
+ * topic: /laserscan_nodelet_manager/bond
+    * to: /depthimage_to_laserscan (http://yangnie-HP:35601/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /camera/depth/image_raw
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /camera/depth/camera_info
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+
+rosnode info /map_server
+--------------------------------------------------------------------------------
+Node [/map_server]
+Publications: 
+ * /map [nav_msgs/OccupancyGrid]
+ * /map_metadata [nav_msgs/MapMetaData]
+ * /rosout [rosgraph_msgs/Log]
+
+Subscriptions: 
+ * /clock [rosgraph_msgs/Clock]
+
+Services: 
+ * /map_server/get_loggers
+ * /map_server/set_logger_level
+ * /static_map
+
+
+contacting node http://yangnie-HP:42253/ ...
+Pid: 21503
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /map
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /map
+    * to: /move_base
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+
+rosnode info /mobile_base_nodelet_manager
+--------------------------------------------------------------------------------
+Node [/mobile_base_nodelet_manager]
+Publications: 
+ * /cmd_vel_mux/active [std_msgs/String]
+ * /cmd_vel_mux/input/navi [geometry_msgs/Twist]
+ * /cmd_vel_mux/input/safety_controller [geometry_msgs/Twist]
+ * /cmd_vel_mux/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /cmd_vel_mux/parameter_updates [dynamic_reconfigure/Config]
+ * /mobile_base/commands/velocity [geometry_msgs/Twist]
+ * /mobile_base/sensors/bumper_pointcloud [sensor_msgs/PointCloud2]
+ * /mobile_base_nodelet_manager/bond [bond/Status]
+ * /navigation_velocity_smoother/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /navigation_velocity_smoother/parameter_updates [dynamic_reconfigure/Config]
+ * /rosout [rosgraph_msgs/Log]
+
+Subscriptions: 
+ * /clock [rosgraph_msgs/Clock]
+ * /cmd_vel_mux/input/navi [geometry_msgs/Twist]
+ * /cmd_vel_mux/input/safety_controller [geometry_msgs/Twist]
+ * /cmd_vel_mux/input/switch [unknown type]
+ * /cmd_vel_mux/input/teleop [unknown type]
+ * /kobuki_safety_controller/disable [unknown type]
+ * /kobuki_safety_controller/enable [unknown type]
+ * /kobuki_safety_controller/reset [unknown type]
+ * /mobile_base/commands/velocity [geometry_msgs/Twist]
+ * /mobile_base/events/bumper [kobuki_msgs/BumperEvent]
+ * /mobile_base/events/cliff [kobuki_msgs/CliffEvent]
+ * /mobile_base/events/wheel_drop [unknown type]
+ * /mobile_base/sensors/core [unknown type]
+ * /mobile_base_nodelet_manager/bond [bond/Status]
+ * /navigation_velocity_smoother/raw_cmd_vel [geometry_msgs/Twist]
+ * /odom [nav_msgs/Odometry]
+
+Services: 
+ * /cmd_vel_mux/set_parameters
+ * /mobile_base_nodelet_manager/get_loggers
+ * /mobile_base_nodelet_manager/list
+ * /mobile_base_nodelet_manager/load_nodelet
+ * /mobile_base_nodelet_manager/set_logger_level
+ * /mobile_base_nodelet_manager/unload_nodelet
+ * /navigation_velocity_smoother/set_parameters
+
+
+contacting node http://yangnie-HP:38655/ ...
+Pid: 20631
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base/commands/velocity
+    * to: /gazebo
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base/commands/velocity
+    * to: /mobile_base_nodelet_manager
+    * direction: outbound
+    * transport: INTRAPROCESS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /mobile_base_nodelet_manager
+    * direction: outbound
+    * transport: INTRAPROCESS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /bumper2pointcloud
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /cmd_vel_mux
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /navigation_velocity_smoother
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /kobuki_safety_controller
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base/sensors/bumper_pointcloud
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base/sensors/bumper_pointcloud
+    * to: /move_base
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /cmd_vel_mux/input/navi
+    * to: /mobile_base_nodelet_manager
+    * direction: outbound
+    * transport: INTRAPROCESS
+ * topic: /cmd_vel_mux/input/safety_controller
+    * to: /mobile_base_nodelet_manager
+    * direction: outbound
+    * transport: INTRAPROCESS
+ * topic: /clock
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /cmd_vel_mux/input/safety_controller
+    * to: /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+    * direction: inbound
+    * transport: INTRAPROCESS
+ * topic: /cmd_vel_mux/input/navi
+    * to: /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+    * direction: inbound
+    * transport: INTRAPROCESS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+    * direction: inbound
+    * transport: INTRAPROCESS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /cmd_vel_mux (http://yangnie-HP:45365/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /bumper2pointcloud (http://yangnie-HP:35163/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /navigation_velocity_smoother (http://yangnie-HP:33191/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /kobuki_safety_controller (http://yangnie-HP:36537/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /odom
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base/commands/velocity
+    * to: /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+    * direction: inbound
+    * transport: INTRAPROCESS
+ * topic: /navigation_velocity_smoother/raw_cmd_vel
+    * to: /move_base (http://yangnie-HP:44163/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base/events/bumper
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base/events/cliff
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+
+rosnode info /move_base
+--------------------------------------------------------------------------------
+Node [/move_base]
+Publications: 
+ * /move_base/DWAPlannerROS/cost_cloud [sensor_msgs/PointCloud2]
+ * /move_base/DWAPlannerROS/global_plan [nav_msgs/Path]
+ * /move_base/DWAPlannerROS/local_plan [nav_msgs/Path]
+ * /move_base/DWAPlannerROS/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /move_base/DWAPlannerROS/parameter_updates [dynamic_reconfigure/Config]
+ * /move_base/DWAPlannerROS/trajectory_cloud [sensor_msgs/PointCloud2]
+ * /move_base/NavfnROS/plan [nav_msgs/Path]
+ * /move_base/current_goal [geometry_msgs/PoseStamped]
+ * /move_base/feedback [move_base_msgs/MoveBaseActionFeedback]
+ * /move_base/global_costmap/costmap [nav_msgs/OccupancyGrid]
+ * /move_base/global_costmap/costmap_updates [map_msgs/OccupancyGridUpdate]
+ * /move_base/global_costmap/footprint [geometry_msgs/PolygonStamped]
+ * /move_base/global_costmap/inflation_layer/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /move_base/global_costmap/inflation_layer/parameter_updates [dynamic_reconfigure/Config]
+ * /move_base/global_costmap/obstacle_layer/clearing_endpoints [sensor_msgs/PointCloud]
+ * /move_base/global_costmap/obstacle_layer/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /move_base/global_costmap/obstacle_layer/parameter_updates [dynamic_reconfigure/Config]
+ * /move_base/global_costmap/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /move_base/global_costmap/parameter_updates [dynamic_reconfigure/Config]
+ * /move_base/global_costmap/static_layer/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /move_base/global_costmap/static_layer/parameter_updates [dynamic_reconfigure/Config]
+ * /move_base/goal [move_base_msgs/MoveBaseActionGoal]
+ * /move_base/local_costmap/costmap [nav_msgs/OccupancyGrid]
+ * /move_base/local_costmap/costmap_updates [map_msgs/OccupancyGridUpdate]
+ * /move_base/local_costmap/footprint [geometry_msgs/PolygonStamped]
+ * /move_base/local_costmap/inflation_layer/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /move_base/local_costmap/inflation_layer/parameter_updates [dynamic_reconfigure/Config]
+ * /move_base/local_costmap/obstacle_layer/clearing_endpoints [sensor_msgs/PointCloud]
+ * /move_base/local_costmap/obstacle_layer/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /move_base/local_costmap/obstacle_layer/parameter_updates [dynamic_reconfigure/Config]
+ * /move_base/local_costmap/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /move_base/local_costmap/parameter_updates [dynamic_reconfigure/Config]
+ * /move_base/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /move_base/parameter_updates [dynamic_reconfigure/Config]
+ * /move_base/result [move_base_msgs/MoveBaseActionResult]
+ * /move_base/status [actionlib_msgs/GoalStatusArray]
+ * /navigation_velocity_smoother/raw_cmd_vel [geometry_msgs/Twist]
+ * /rosout [rosgraph_msgs/Log]
+
+Subscriptions: 
+ * /clock [rosgraph_msgs/Clock]
+ * /map [nav_msgs/OccupancyGrid]
+ * /mobile_base/sensors/bumper_pointcloud [sensor_msgs/PointCloud2]
+ * /move_base/cancel [actionlib_msgs/GoalID]
+ * /move_base/global_costmap/footprint [geometry_msgs/PolygonStamped]
+ * /move_base/goal [move_base_msgs/MoveBaseActionGoal]
+ * /move_base/local_costmap/footprint [geometry_msgs/PolygonStamped]
+ * /move_base_simple/goal [geometry_msgs/PoseStamped]
+ * /odom [nav_msgs/Odometry]
+ * /scan [sensor_msgs/LaserScan]
+ * /tf [tf2_msgs/TFMessage]
+ * /tf_static [tf2_msgs/TFMessage]
+
+Services: 
+ * /move_base/DWAPlannerROS/set_parameters
+ * /move_base/NavfnROS/make_plan
+ * /move_base/clear_costmaps
+ * /move_base/get_loggers
+ * /move_base/global_costmap/inflation_layer/set_parameters
+ * /move_base/global_costmap/obstacle_layer/set_parameters
+ * /move_base/global_costmap/set_parameters
+ * /move_base/global_costmap/static_layer/set_parameters
+ * /move_base/local_costmap/inflation_layer/set_parameters
+ * /move_base/local_costmap/obstacle_layer/set_parameters
+ * /move_base/local_costmap/set_parameters
+ * /move_base/make_plan
+ * /move_base/set_logger_level
+ * /move_base/set_parameters
+
+
+contacting node http://yangnie-HP:44163/ ...
+Pid: 21533
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /navigation_velocity_smoother/raw_cmd_vel
+    * to: /mobile_base_nodelet_manager
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /move_base/goal
+    * to: /move_base
+    * direction: outbound
+    * transport: INTRAPROCESS
+ * topic: /move_base/global_costmap/costmap
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /move_base/global_costmap/costmap_updates
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /move_base/local_costmap/costmap
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /move_base/local_costmap/costmap_updates
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /move_base/DWAPlannerROS/global_plan
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /move_base/DWAPlannerROS/local_plan
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /move_base/DWAPlannerROS/cost_cloud
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /move_base/DWAPlannerROS/trajectory_cloud
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /move_base/result
+    * to: /pick_objects
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /move_base/feedback
+    * to: /pick_objects
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /move_base/status
+    * to: /pick_objects
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /tf
+    * to: /robot_state_publisher (http://yangnie-HP:40637/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /tf
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /tf
+    * to: /amcl (http://yangnie-HP:37329/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /tf_static
+    * to: /robot_state_publisher (http://yangnie-HP:40637/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /move_base_simple/goal
+    * to: /rviz (http://yangnie-HP:39443/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /map
+    * to: /map_server (http://yangnie-HP:42253/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /scan
+    * to: /laserscan_nodelet_manager (http://yangnie-HP:32849/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base/sensors/bumper_pointcloud
+    * to: /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /odom
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /move_base/goal
+    * to: /move_base (http://yangnie-HP:44163/)
+    * direction: inbound
+    * transport: INTRAPROCESS
+ * topic: /move_base/goal
+    * to: /pick_objects (http://yangnie-HP:43117/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /move_base/cancel
+    * to: /pick_objects (http://yangnie-HP:43117/)
+    * direction: inbound
+    * transport: TCPROS
+
+rosnode info /navigation_velocity_smoother
+--------------------------------------------------------------------------------
+Node [/navigation_velocity_smoother]
+Publications: 
+ * /mobile_base_nodelet_manager/bond [bond/Status]
+ * /rosout [rosgraph_msgs/Log]
+
+Subscriptions: 
+ * /clock [rosgraph_msgs/Clock]
+ * /mobile_base_nodelet_manager/bond [bond/Status]
+
+Services: 
+ * /navigation_velocity_smoother/get_loggers
+ * /navigation_velocity_smoother/set_logger_level
+
+
+contacting node http://yangnie-HP:33191/ ...
+Pid: 21510
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /navigation_velocity_smoother
+    * direction: outbound
+    * transport: INTRAPROCESS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /kobuki_safety_controller
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /mobile_base_nodelet_manager
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /cmd_vel_mux
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /bumper2pointcloud
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /navigation_velocity_smoother (http://yangnie-HP:33191/)
+    * direction: inbound
+    * transport: INTRAPROCESS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /kobuki_safety_controller (http://yangnie-HP:36537/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /cmd_vel_mux (http://yangnie-HP:45365/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base_nodelet_manager/bond
+    * to: /bumper2pointcloud (http://yangnie-HP:35163/)
+    * direction: inbound
+    * transport: TCPROS
+
+rosnode info /pick_objects
+--------------------------------------------------------------------------------
+Node [/pick_objects]
+Publications: 
+ * /move_base/cancel [actionlib_msgs/GoalID]
+ * /move_base/goal [move_base_msgs/MoveBaseActionGoal]
+ * /notifying [pick_objects/Notify]
+ * /rosout [rosgraph_msgs/Log]
+
+Subscriptions: 
+ * /clock [rosgraph_msgs/Clock]
+ * /move_base/feedback [move_base_msgs/MoveBaseActionFeedback]
+ * /move_base/result [move_base_msgs/MoveBaseActionResult]
+ * /move_base/status [actionlib_msgs/GoalStatusArray]
+
+Services: 
+ * /pick_objects/get_loggers
+ * /pick_objects/set_logger_level
+
+
+contacting node http://yangnie-HP:43117/ ...
+Pid: 22834
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /notifying
+    * to: /add_marker
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /move_base/goal
+    * to: /move_base
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /move_base/cancel
+    * to: /move_base
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /move_base/status
+    * to: /move_base (http://yangnie-HP:44163/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /move_base/feedback
+    * to: /move_base (http://yangnie-HP:44163/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /move_base/result
+    * to: /move_base (http://yangnie-HP:44163/)
+    * direction: inbound
+    * transport: TCPROS
+
+rosnode info /robot_state_publisher
+--------------------------------------------------------------------------------
+Node [/robot_state_publisher]
+Publications: 
+ * /rosout [rosgraph_msgs/Log]
+ * /tf [tf2_msgs/TFMessage]
+ * /tf_static [tf2_msgs/TFMessage]
+
+Subscriptions: 
+ * /clock [rosgraph_msgs/Clock]
+ * /joint_states [sensor_msgs/JointState]
+
+Services: 
+ * /robot_state_publisher/get_loggers
+ * /robot_state_publisher/set_logger_level
+
+
+contacting node http://yangnie-HP:40637/ ...
+Pid: 20601
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /tf
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /tf
+    * to: /move_base
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /tf
+    * to: /amcl
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /tf_static
+    * to: /rviz
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /tf_static
+    * to: /move_base
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /tf_static
+    * to: /amcl
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /joint_states
+    * to: /joint_state_publisher (http://yangnie-HP:44507/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /joint_states
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+
+rosnode info /rosout
+--------------------------------------------------------------------------------
+Node [/rosout]
+Publications: 
+ * /rosout_agg [rosgraph_msgs/Log]
+
+Subscriptions: 
+ * /clock [rosgraph_msgs/Clock]
+ * /rosout [rosgraph_msgs/Log]
+
+Services: 
+ * /rosout/get_loggers
+ * /rosout/set_logger_level
+
+
+contacting node http://yangnie-HP:38099/ ...
+Pid: 20576
+Connections:
+ * topic: /clock
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /rosout
+    * to: /cmd_vel_mux (http://yangnie-HP:45365/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /rosout
+    * to: /robot_state_publisher (http://yangnie-HP:40637/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /rosout
+    * to: /depthimage_to_laserscan (http://yangnie-HP:35601/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /rosout
+    * to: /bumper2pointcloud (http://yangnie-HP:35163/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /rosout
+    * to: /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /rosout
+    * to: /laserscan_nodelet_manager (http://yangnie-HP:32849/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /rosout
+    * to: /rviz (http://yangnie-HP:39443/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /rosout
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /rosout
+    * to: /joint_state_publisher (http://yangnie-HP:44507/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /rosout
+    * to: /kobuki_safety_controller (http://yangnie-HP:36537/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /rosout
+    * to: /amcl (http://yangnie-HP:37329/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /rosout
+    * to: /navigation_velocity_smoother (http://yangnie-HP:33191/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /rosout
+    * to: /map_server (http://yangnie-HP:42253/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /rosout
+    * to: /move_base (http://yangnie-HP:44163/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /rosout
+    * to: /add_marker (http://yangnie-HP:42829/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /rosout
+    * to: /pick_objects (http://yangnie-HP:43117/)
+    * direction: inbound
+    * transport: TCPROS
+
+rosnode info /rviz
+--------------------------------------------------------------------------------
+Node [/rviz]
+Publications: 
+ * /clicked_point [geometry_msgs/PointStamped]
+ * /initialpose [geometry_msgs/PoseWithCovarianceStamped]
+ * /move_base_simple/goal [geometry_msgs/PoseStamped]
+ * /rosout [rosgraph_msgs/Log]
+
+Subscriptions: 
+ * /camera/rgb/camera_info [sensor_msgs/CameraInfo]
+ * /camera/rgb/image_raw [sensor_msgs/Image]
+ * /clock [rosgraph_msgs/Clock]
+ * /map [nav_msgs/OccupancyGrid]
+ * /map_updates [unknown type]
+ * /mobile_base/sensors/bumper_pointcloud [sensor_msgs/PointCloud2]
+ * /move_base/DWAPlannerROS/cost_cloud [sensor_msgs/PointCloud2]
+ * /move_base/DWAPlannerROS/global_plan [nav_msgs/Path]
+ * /move_base/DWAPlannerROS/local_plan [nav_msgs/Path]
+ * /move_base/DWAPlannerROS/trajectory_cloud [sensor_msgs/PointCloud2]
+ * /move_base/global_costmap/costmap [nav_msgs/OccupancyGrid]
+ * /move_base/global_costmap/costmap_updates [map_msgs/OccupancyGridUpdate]
+ * /move_base/local_costmap/costmap [nav_msgs/OccupancyGrid]
+ * /move_base/local_costmap/costmap_updates [map_msgs/OccupancyGridUpdate]
+ * /particlecloud [geometry_msgs/PoseArray]
+ * /scan [sensor_msgs/LaserScan]
+ * /tf [tf2_msgs/TFMessage]
+ * /tf_static [tf2_msgs/TFMessage]
+ * /visualization_marker [visualization_msgs/Marker]
+ * /visualization_marker_array [unknown type]
+
+Services: 
+ * /rviz/get_loggers
+ * /rviz/reload_shaders
+ * /rviz/set_logger_level
+
+
+contacting node http://yangnie-HP:39443/ ...
+Pid: 20689
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /initialpose
+    * to: /amcl
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /move_base_simple/goal
+    * to: /move_base
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /tf
+    * to: /robot_state_publisher (http://yangnie-HP:40637/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /tf
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /tf
+    * to: /amcl (http://yangnie-HP:37329/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /tf_static
+    * to: /robot_state_publisher (http://yangnie-HP:40637/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /scan
+    * to: /laserscan_nodelet_manager (http://yangnie-HP:32849/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /visualization_marker
+    * to: /add_marker (http://yangnie-HP:42829/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /particlecloud
+    * to: /amcl (http://yangnie-HP:37329/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /map
+    * to: /map_server (http://yangnie-HP:42253/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /move_base/DWAPlannerROS/global_plan
+    * to: /move_base (http://yangnie-HP:44163/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /camera/rgb/image_raw
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /camera/rgb/camera_info
+    * to: /gazebo (http://yangnie-HP:44683/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /move_base/local_costmap/costmap
+    * to: /move_base (http://yangnie-HP:44163/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /move_base/local_costmap/costmap_updates
+    * to: /move_base (http://yangnie-HP:44163/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /move_base/DWAPlannerROS/local_plan
+    * to: /move_base (http://yangnie-HP:44163/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /move_base/DWAPlannerROS/cost_cloud
+    * to: /move_base (http://yangnie-HP:44163/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /move_base/DWAPlannerROS/trajectory_cloud
+    * to: /move_base (http://yangnie-HP:44163/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base/sensors/bumper_pointcloud
+    * to: /mobile_base_nodelet_manager (http://yangnie-HP:38655/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /move_base/global_costmap/costmap
+    * to: /move_base (http://yangnie-HP:44163/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /move_base/global_costmap/costmap_updates
+    * to: /move_base (http://yangnie-HP:44163/)
+    * direction: inbound
+    * transport: TCPROS
+
+
+rostopic list -p
+==========================================================
+/amcl/parameter_descriptions
+/amcl/parameter_updates
+/amcl_pose
+/camera/depth/camera_info
+/camera/depth/image_raw
+/camera/depth/points
+/camera/parameter_descriptions
+/camera/parameter_updates
+/camera/rgb/camera_info
+/camera/rgb/image_raw
+/camera/rgb/image_raw/compressed
+/camera/rgb/image_raw/compressed/parameter_descriptions
+/camera/rgb/image_raw/compressed/parameter_updates
+/camera/rgb/image_raw/compressedDepth
+/camera/rgb/image_raw/compressedDepth/parameter_descriptions
+/camera/rgb/image_raw/compressedDepth/parameter_updates
+/camera/rgb/image_raw/theora
+/camera/rgb/image_raw/theora/parameter_descriptions
+/camera/rgb/image_raw/theora/parameter_updates
+/clicked_point
+/clock
+/cmd_vel_mux/active
+/cmd_vel_mux/input/navi
+/cmd_vel_mux/input/safety_controller
+/cmd_vel_mux/parameter_descriptions
+/cmd_vel_mux/parameter_updates
+/depthimage_to_laserscan/parameter_descriptions
+/depthimage_to_laserscan/parameter_updates
+/gazebo/link_states
+/gazebo/model_states
+/gazebo/parameter_descriptions
+/gazebo/parameter_updates
+/initialpose
+/joint_states
+/laserscan_nodelet_manager/bond
+/map
+/map_metadata
+/mobile_base/commands/velocity
+/mobile_base/events/bumper
+/mobile_base/events/cliff
+/mobile_base/sensors/bumper_pointcloud
+/mobile_base/sensors/imu_data
+/mobile_base_nodelet_manager/bond
+/move_base/DWAPlannerROS/cost_cloud
+/move_base/DWAPlannerROS/global_plan
+/move_base/DWAPlannerROS/local_plan
+/move_base/DWAPlannerROS/parameter_descriptions
+/move_base/DWAPlannerROS/parameter_updates
+/move_base/DWAPlannerROS/trajectory_cloud
+/move_base/NavfnROS/plan
+/move_base/cancel
+/move_base/current_goal
+/move_base/feedback
+/move_base/global_costmap/costmap
+/move_base/global_costmap/costmap_updates
+/move_base/global_costmap/footprint
+/move_base/global_costmap/inflation_layer/parameter_descriptions
+/move_base/global_costmap/inflation_layer/parameter_updates
+/move_base/global_costmap/obstacle_layer/clearing_endpoints
+/move_base/global_costmap/obstacle_layer/parameter_descriptions
+/move_base/global_costmap/obstacle_layer/parameter_updates
+/move_base/global_costmap/parameter_descriptions
+/move_base/global_costmap/parameter_updates
+/move_base/global_costmap/static_layer/parameter_descriptions
+/move_base/global_costmap/static_layer/parameter_updates
+/move_base/goal
+/move_base/local_costmap/costmap
+/move_base/local_costmap/costmap_updates
+/move_base/local_costmap/footprint
+/move_base/local_costmap/inflation_layer/parameter_descriptions
+/move_base/local_costmap/inflation_layer/parameter_updates
+/move_base/local_costmap/obstacle_layer/clearing_endpoints
+/move_base/local_costmap/obstacle_layer/parameter_descriptions
+/move_base/local_costmap/obstacle_layer/parameter_updates
+/move_base/local_costmap/parameter_descriptions
+/move_base/local_costmap/parameter_updates
+/move_base/parameter_descriptions
+/move_base/parameter_updates
+/move_base/result
+/move_base/status
+/move_base_simple/goal
+/navigation_velocity_smoother/parameter_descriptions
+/navigation_velocity_smoother/parameter_updates
+/navigation_velocity_smoother/raw_cmd_vel
+/notifying
+/odom
+/particlecloud
+/rosout
+/rosout_agg
+/scan
+/tf
+/tf_static
+/visualization_marker
+
+rostopic list -s
+==========================================================
+/camera/depth/camera_info
+/camera/depth/image_raw
+/camera/rgb/camera_info
+/camera/rgb/image_raw
+/clock
+/cmd_vel_mux/input/navi
+/cmd_vel_mux/input/safety_controller
+/cmd_vel_mux/input/switch
+/cmd_vel_mux/input/teleop
+/gazebo/set_link_state
+/gazebo/set_model_state
+/initialpose
+/joint_states
+/kobuki_safety_controller/disable
+/kobuki_safety_controller/enable
+/kobuki_safety_controller/reset
+/laserscan_nodelet_manager/bond
+/map
+/map_updates
+/mobile_base/commands/motor_power
+/mobile_base/commands/reset_odometry
+/mobile_base/commands/velocity
+/mobile_base/events/bumper
+/mobile_base/events/cliff
+/mobile_base/events/wheel_drop
+/mobile_base/sensors/bumper_pointcloud
+/mobile_base/sensors/core
+/mobile_base_nodelet_manager/bond
+/move_base/DWAPlannerROS/cost_cloud
+/move_base/DWAPlannerROS/global_plan
+/move_base/DWAPlannerROS/local_plan
+/move_base/DWAPlannerROS/trajectory_cloud
+/move_base/cancel
+/move_base/feedback
+/move_base/global_costmap/costmap
+/move_base/global_costmap/costmap_updates
+/move_base/global_costmap/footprint
+/move_base/goal
+/move_base/local_costmap/costmap
+/move_base/local_costmap/costmap_updates
+/move_base/local_costmap/footprint
+/move_base/result
+/move_base/status
+/move_base_simple/goal
+/navigation_velocity_smoother/raw_cmd_vel
+/notifying
+/odom
+/particlecloud
+/rosout
+/scan
+/tf
+/tf_static
+/visualization_marker
+/visualization_marker_array
