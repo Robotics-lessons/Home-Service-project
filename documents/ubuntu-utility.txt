@@ -1,0 +1,29 @@
+lsb_release -a
+
+ubuntu-support-status
+
+uname -a
+
+Upgrade ubuntu from 16.04 to 17.10
+===================================
+1. sudo apt install update-manager-core
+2. sudo do-release-upgrade
+
+if see error like: 
+http://us.archive.ubuntu.com/ubuntu/dists/artful-proposed/main/binary-arm64/Packages 
+404 Not Found [IP: 91.189.91.26 80], E:Some index files failed to 
+download. They have been ignored, or old ones used instead. 
+
+use this to check:
+dpkg --print-foreign-architectures
+and  removed the package that caused the problem
+sudo dpkg --remove-architecture arm64
+
+then run:
+sudo apt update
+sudo apt upgrade
+sudo apt autoremove
+
+Find brokem packages:
+grep Broken /var/log/dist-upgrade/apt.log
+
