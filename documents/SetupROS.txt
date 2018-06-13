@@ -13,3 +13,15 @@ Set up ROS version: Kinetic
 To find available packages, use:
 apt-cache search ros-kinetic
 
+Set up ROS version: Melodic
+===============================
+1. sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+2. sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+3. sudo apt-get update
+4. sudo apt-get install ros-melodic-desktop-full
+5. sudo rosdep init
+6. rosdep update
+7. echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+8. source ~/.bashrc
+9. sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential
+
